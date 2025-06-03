@@ -1,0 +1,83 @@
+@import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Yeseva+One&display=swap");
+@import "tailwindcss";
+
+::-webkit-scrollbar {
+  width: 8px; /* width of the scrollbar */
+  height: 5px; /* width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: #dedede00;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #eca900;
+  border-radius: 4px; /* roundness of the thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #ff9203;
+}
+
+@theme {
+  --font-jost: "Jost", sans-serif;
+  --font-yeseva-one: "Yeseva One", cursive;
+}
+.clip-path-hero {
+  clip-path: polygon(0 0, 100% 0, 70% 100%, 0 100%);
+}
+/* src/index.css */
+body {
+  font-family: var(--font-jost); /* Apply Jost globally */
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-yeseva-one); /* Apply Yeseva One to headers */
+}
+
+button {
+  @apply !text-white;
+}
+
+.ant-input {
+  @apply rounded-none;
+}
+/* Common styles for Select and DatePicker */
+.ant-select,
+.ant-picker {
+  height: 48px !important;
+}
+
+.ant-select-selector,
+.ant-picker {
+  height: 48px !important;
+  border-radius: 0 !important; /* Sharp corners */
+  display: flex;
+  align-items: center;
+  padding: 0 16px !important;
+}
+
+.ant-select-selection-item,
+.ant-picker-input input {
+  line-height: 48px !important;
+}
+
+.sharp-dropdown .ant-select-dropdown {
+  border-radius: 0 !important; /* Sharp corners for dropdown menu */
+}
+.review-swiper {
+  padding: 10px 0;
+}
+.swiper-slide {
+  transition: all 0.3s ease;
+}
+.ant-modal-content,
+.ant-card {
+  @apply !rounded-none;
+}
+.ant-picker-dropdown .ant-picker-header > button,
+.ant-picker-dropdown .ant-picker-header-view > button {
+  @apply !text-black;
+}
